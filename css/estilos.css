@@ -65,12 +65,15 @@ a {
     color: var(--cor-clara);
     padding: 0.3rem 1rem;
     border-radius: 4px;
+    background-color: var(--cor-clara);
 }
 
 .topo {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .titulo-menu a {
