@@ -2,9 +2,7 @@
 
 /* Alterando o Box Model */
 * {
-    
     box-sizing: border-box;
-    background-color: aliceblue;
 }
 
 /* Declaração de variáveis (sempre no :root) */
@@ -17,26 +15,40 @@
 }
 
 /* Valor de referência/base para uso da medida REM */
-html { font-size: 16px;}
+html {
+    font-size: 16px;
+}
 
 /* Reset de alguns elementos  */
-body, h1, h2, p, figure, .links-menu {
+body,
+h1,
+h2,
+p,
+figure,
+.links-menu {
     margin: 0;
     padding: 0;
 }
 
-img { max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
-iframe {max-width: 100%;}
+iframe {
+    max-width: 100%;
+}
 
 body {
     font-family: "Noto Sans", sans-serif;
     color: var(--cor-texto);
 
-    text-transform: uppercase;
-    font-weight: 800, ; /* extra bold */
-    
+    /* text-transform: uppercase; */
+    /* font-weight: 800, ; */
+    /* extra bold */
+
 }
+
+a { text-decoration: none;}
 
 .titulo {
     font-family: Raleway, sans-serif;
@@ -59,4 +71,77 @@ body {
     align-items: center;
 }
 
+.titulo-menu a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    /* background-color: yellow; */
+    display: inline-block;
+    padding: 1rem;
+}
 
+.menu a:hover {
+    background-color: var(--cor-intermediaria);
+}
+
+.links-menu {
+    list-style: none;
+    display: none;
+}
+
+.links-menu.aberto {
+    /* Usamos o flex para fazer os links
+    aparecerem e ao mesmo ter acesso a
+    todas as vantagens do flex. */
+    display: flex;
+
+    /* Fazemos com que os links fiquem
+    dispostos como coluna (verticalmente) */
+    flex-direction: column;
+
+    /* Usamos o position absolute para "soltar" a lista de links na tela e com as propriedades/coordenadas
+    left e right ajustar sua posição em relação às laterais. */
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    background-color: var(--cor-clara);
+}
+
+.destaque {
+    height: 75vh;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
+    color: var(--cor-clara);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* Etapa 1: criar regra de animalao */
+@keyframes animaDestaque {
+    /* Dê (como começa) */
+    from { 
+        opacity: 0;
+        transform: scale(0.5) ;
+    }
+
+    /* Para (como termina) */
+    to { 
+        opacity: 1;
+        transform: scale(0.5);
+    
+    }
+}
+
+
+.destaque h2 , .destaque p {
+    animation-name: animaDestaque;
+    animation-duration: 0.5s;
+
+
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+}
