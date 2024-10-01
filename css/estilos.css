@@ -223,6 +223,16 @@ article address {
     padding-top: 13px;
     background-color: rgba(0, 255, 255, 0.644);
     border-radius: 15rem;
-    
-    
+}
+
+/* Regras para as demais páginas (Produtos, Serviços e Contato) */
+.conteudo-geral {
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+}
+
+.conteudo-geral h2 {
+    padding-left: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px;
 }
