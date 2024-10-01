@@ -73,7 +73,6 @@ a {
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: var(--cor-clara);
 }
 
 .titulo-menu a {
