@@ -81,7 +81,7 @@ a {
     align-items: center;
 }
 
- /* Classe que será aplicada en algumas partes do site visando criar limites de tamanho */
+/* Classe que será aplicada en algumas partes do site visando criar limites de tamanho */
 .limitador {
     width: 95vw;
     max-width: 1000px;
@@ -296,4 +296,22 @@ td:last-child {
 /* Selecionando linhas alternadas podemos usar even (par) ou odd (ímpares) */
 tr:nth-child(even) {
     background-color: var(--cor-clara);
+}
+
+.galeria {
+    text-align: center;
+    background-color: aqua
+    0;
+}
+
+.galeria img {
+    border-radius: 50%;
+    box-shadow: var(--cor-escura) 0 0 10px;
+    transform: scale(1.2) rotate(-20deg);
+    transition: 0.5s;
+    
+}
+
+.galeria img:hover {
+    transform: scale(1);
 }
