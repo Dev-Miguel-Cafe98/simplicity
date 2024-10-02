@@ -81,7 +81,7 @@ a {
     align-items: center;
 }
 
-/* Classe que será aplicada en algumas partes do site visando criar limites de tamanho */
+ /* Classe que será aplicada en algumas partes do site visando criar limites de tamanho */
 .limitador {
     width: 95vw;
     max-width: 1000px;
