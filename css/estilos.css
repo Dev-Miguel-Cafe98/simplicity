@@ -67,12 +67,26 @@ a {
     border-radius: 4px;
 }
 
+/* Cabeçalho/Topo "cheio", ou seja, pegando 100% da tela e ficado. */
 .topo {
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
+}
+
+/* div com a classe limitador DENTRO do topo (sub-cabeçalho): aplicamos os ajustes de layout (flex) */
+.topo .limitador {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
+}
+
+/* Classe que será aplicada en algumas partes do site visando criar limites de tamanho */
+.limitador {
+    width: 95vw;
+    max-width: 1000px;
+    margin: auto;
+    /* background-color: yellow; */
 }
 
 .titulo-menu a {
@@ -282,12 +296,4 @@ td:last-child {
 /* Selecionando linhas alternadas podemos usar even (par) ou odd (ímpares) */
 tr:nth-child(even) {
     background-color: var(--cor-clara);
-}
-
-/* Classe que será aplicada en algumas partes do site visando criar limites de tamanho */
-.limitador {
-    width: 95vw;
-    max-width: 1000px;
-    margin: auto;
-    background-color: yellow;
 }
